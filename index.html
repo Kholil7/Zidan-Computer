@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-vWl2TJW0UqSm7cK9KRT4GJvyCJvlrnjsNRh2JYP4+XQjLDgaAtIaRrZyqJtuyJE3DtFJ4JBUCdEnb5l4Hk0x9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <title>Zidan Computer</title>
+  </head>
+  <body>
+      <div id="loading"><span id="status"></span></div>
+    <header>
+        <div class="custom-shape-divider-top-1714439166">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <nav>
+            <div class="title">
+                <span class="menu-toggle"><input type="checkbox" id="menu-toggle"><i class="fas fa-bars"></i></span>
+                <a href="index.html">ZIDAN COMPUTER</a>
+            </div>
+            <ul>
+                <li class="one">#</li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="wrapper">
+                <h1 class="tagline"><span class="zidan">Zidan Computer </span>Solusi Terpercaya untuk Semua Masalah Teknologi Anda!</h1>
+                <img src="asset/display.webp" alt="Gambar" class="loww">
+            <aside>
+                <form id="form-whatsapp"  onsubmit="sendMessage()" autocomplete="off">
+                    <div class="mb-3">
+                      <label for="username" class="form-label">Masukkan Nama</label>
+                      <input type="text" class="form-control" id="username" placeholder="Masukkan Nama Anda" style="background-color: rgba(255, 255, 255, 0); color: white;" oninput="capitalizeFirstLetter(this)">
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Pesan</label>
+                          <textarea cols="30" rows="10" id="message" class="form-control" placeholder="Masukkan Pesan Anda" style="background-color: rgba(255, 255, 255, 0); color: white;" oninput="capitalizeFirstLetter(this)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: black;">Kirim</button>
+                        <div class="form-text">Pesan ini akan langsung di teruskan ke WhatsApp.</div>
+                        <div class="form-text">Open 18.00 -> 00.00 WIB.</div>
+                      </div>
+                  </form>
+            <div class="displayimg">
+                <img src="asset/display.webp" alt="Gambar">
+            </div>
+        </section>
+        </aside>
+        <article>
+            <div class="full">
+                <h1 class="paket">paket</h1>
+                <div class="image-container">
+                    <div class="paket1">
+                        <h2 class="tema">INSTALASI</h2>
+                        <img data-src="asset/instalasi.jpeg" alt="Intalasi" loading="lazy">
+                        <p>Intalasi sistem operasi dan instal ulang sistem operasi windows.</p>
+                        <h3 class="harga">Harga</h3>
+                        <h4 class="pay">Rp. 50.000</h4>
+                        <button type="button" class="btn btn-outline-secondary" id="tanya1" onclick="tanya1()">Tanya?</button>
+                    </div>
+                    <div class="paket2">
+                        <h2 class="tema">JUAL & BELI</h2>
+                        <img data-src="asset/jualbeli.jpeg" alt="Intalasi" loading="lazy">
+                        <p>Menjual laptop second yang berkualitas dan terjamin.</p>
+                        <h3 class="harga">Harga</h3>
+                        <h4 class="pay">Bervariasi</h4>
+                        <button type="button" class="btn btn-outline-secondary" id="tanya2" onclick="tanya2()">Tanya?</button>
+                    </div>
+                    <div class="paket3">
+                        <h2 class="tema">SERVICE</h2>
+                        <img data-src="asset/service.jpeg" alt="instalasi" loading="lazy">
+                        <p>Melakukan pelayanan service komputer yang mengedepankan kepuasan pelanggan.</p>
+                        <h3 class="harga">Harga</h3>
+                        <h4 class="pay">Tergantung kerusakan</h4>
+                        <button type="button" class="btn btn-outline-secondary" id="tanya3" onclick="tanya3()">Tanya?</button>
+                    </div>  
+                </div>            
+            </div>
+            <div class="pkl">
+                <div class="allparag">
+                    <div class="parag1">
+                        <h3>Kenapa Zidan Computer</h3>
+                        <p>Zidan Computer unggul dalam menyediakan solusi teknologi karena keahlian terpercaya, layanan ramah pelanggan, solusi yang komprehensif, kualitas terjamin, keterjangkauan, dan komitmen terhadap kepuasan pelanggan.</p>
+                    </div>
+                    <div class="parag2">
+                        <h3>Kelebihan Zidan Computer</h3>
+                        <p>Zidan Computer adalah tujuan terpercaya untuk perbaikan dan perawatan komputer sejak 2004. Dengan lebih dari 20 tahun pengalaman, kami menawarkan solusi cepat dan handal untuk semua masalah komputer.</p>
+                    </div>
+                    <div class="parag3">
+                        <h3>Zidan Computer, Bisa Apa?</h3>
+                        <p>Zidan Computer bisa melakukan segalanya! Mulai dari servis laptop, perawatan printer, hingga instalasi sistem operasi. Kami juga menawarkan jual beli laptop. Percayakan kebutuhan teknologi Anda kepada Zidan Computer.</p>
+                    </div>
+                </div>
+                <div class="peta">
+                    <h2>Lokasi Zidan Computer</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.412313379662!2d113.72608337411974!3d-7.746015876792716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd71fbab363d93b%3A0x2c2682693f345784!2sZidan%20Computer!5e0!3m2!1sid!2sid!4v1715110769592!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright Zidan Computer &copy;2024</p>
+    </footer>
+  </body>
+</html>

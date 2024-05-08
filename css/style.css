@@ -1,0 +1,537 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20%;
+  z-index: 10000;
+}
+
+/* HEADER */
+.title a{
+  padding-left: 9px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.title a:hover{
+  opacity: 80%;
+  transition: all .9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #001524;
+  color: white;
+}
+
+.title {
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-top: 120px;
+  margin: 0;
+}
+
+nav li {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards; 
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+nav a:hover{
+  opacity: 50%;
+  transition: all .9;
+  color: white;
+  text-decoration: underline;
+}
+
+.title p {
+  font-weight: bold;
+}
+
+/* Menu toggle */
+
+.menu-toggle{
+  display: none;
+}
+
+/* MAIN */
+main .wrapper{
+  padding-left: 30px;
+}
+
+main .tagline .zidan {
+  font-size: 40px;
+}
+
+main .tagline{
+  width: 750px;
+  opacity: 0;
+  transform: translateY(-20%); /* Geser div ke bawah sejauh 100% dari tinggi div */
+  animation: slideFromTop 1s forwards;
+  font-size: 30px;
+}
+
+
+form {
+  width: 300px;
+  padding-top: 10px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20%); /* Geser div ke bawah sejauh 100% dari tinggi div */
+  animation: slideFromBottom 1s forwards; 
+}
+
+
+button{
+  display: block;
+  background-color: black;
+}
+
+form #message {
+  height: 70px;
+}
+
+form label{
+    padding-top: 8px;
+}
+
+aside {
+  display: flex;
+}
+
+main .loww{
+  width: 300px;
+  position: relative;
+  right: -50px;
+  display: none;
+}
+
+.displayimg img {
+  width: 560px;
+  top: -240px;
+  right: -400px;
+  position: relative;
+  margin-bottom: -285px; /* Perbaiki margin yang tidak diinginkan */
+  filter: drop-shadow(10px 10px 40px rgba(255, 255, 255, 0.582));
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideFromRight 1s forwards;
+}
+
+article{
+  margin-top: 50px;
+  background-color: #001524;
+  color: black;
+}
+
+.full{
+  color: white;
+}
+
+.paket{
+  font-size: 45px;
+  margin-top: 90px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.paket {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.paket.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row; /* Mengatur foto untuk berjajar secara horizontal */
+  justify-content: space-around; /* Menyusun foto agar berada di tengah dengan ruang di antara mereka */
+  align-items: center; /* Memusatkan foto secara vertikal */
+  padding-bottom: 130px;
+}
+
+.image-container p{
+  padding-top: 10px;
+}
+
+.image-container img {
+  max-width: 100%; /* Memastikan foto tidak melebihi lebar container */
+  height: auto; /* Menjaga proporsi aspek foto */
+  width: 300px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.paket1,.paket2,.paket3{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 360px;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.83);
+}
+
+.allparag{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  text-align: justify;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.pkl{
+  background-color: white;
+}
+
+.allparag h3{
+  text-align: center;
+}
+
+article .parag1,.parag2,.parag3{
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 9px;
+  padding: 8px;
+}
+
+iframe{
+  margin-left: 100px;
+}
+
+.peta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+}
+
+.peta h2{
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #2f7db9;
+  color: white;
+  box-shadow: #001524 4px -5px 2px 1px;
+}
+ 
+/* FOOTER */
+footer{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(58, 56, 56);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* RESPONSIVE */
+/* Untuk layar dengan lebar maksimal 1100px (tablet++) */
+@media (max-width: 1100px) {
+    nav ul{
+      padding-top: 20px;
+    }
+    main .tagline {
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+    }
+    form {
+      width: 100%; 
+      padding-right: 9px;
+    }
+    .displayimg img {
+      width: 100%;
+      top: 0;
+      right: 0;
+      margin-bottom: 0;
+      opacity: 0;
+      transform: translateY(20%); /* Geser div ke bawah sejauh 100% dari tinggi div */
+      animation: slideFromBottom 1s forwards; 
+    }
+    .image-container img{
+      width: 98%;
+    }
+    .paket1,.paket2,.paket3{
+      width: 80%;
+      height: 570px;
+      margin: 10px;
+    }
+  }
+
+  /* Untuk layar dengan lebar maksimal 576px (ponsel) */
+  @media (max-width: 576px) {
+    #loading{
+      padding-top: 90%;
+    }
+    nav{
+      background: #092941;
+      padding-bottom: 7px;
+      margin-bottom: 15px;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      right: 0;
+      width: 100vw;
+    }
+    .title a{
+      font-size: 25px;
+      padding-left: 57px;
+      padding-bottom: 2px;
+    }
+    nav .one{
+      display: none;
+    }
+    nav ul{
+      position: absolute;
+      z-index: 1000;
+      width: 100vw;
+      padding-top: 25px;
+      display: none;
+      flex-direction: column;
+      background-color: #092941;
+      padding-top: 0;
+      padding-bottom: 15px;
+    }
+    nav ul li{
+      animation: none;
+      opacity: 100;
+      padding: 0;
+      padding-top: 10px;
+    }
+    nav ul li a{
+      font-size: 13px;
+    }
+    .menu-toggle input{
+      position: absolute;
+      top: 12px;
+      left: 28px;
+      width: 35px;
+      height: 32px;
+      opacity: 0;
+    }
+    .menu-toggle{
+      display: inline-flex;
+      font-size: 26px;
+    }
+    form{
+      padding-left: 20px;
+    }
+    .custom-shape-divider-top-1714357173{
+      position: relative;
+      z-index: -1000;
+    }
+    main .wrapper{
+      padding-left: 0;
+    }
+    main .tagline {
+      font-size: 28px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 80px;
+    }
+    main .loww{
+      display: block;
+      filter: drop-shadow(10px 10px 40px rgba(255, 255, 255, 0.582));
+      opacity: 0;
+      transform: translateY(20%); /* Geser div ke bawah sejauh 100% dari tinggi div */
+      animation: slideFromBottom 1s forwards; 
+    }
+    .displayimg img{
+      display: none;
+    }
+    form{
+      width: 340px;
+    }
+    .allparag{
+      flex-direction: column;
+      text-align: justify;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    article .parag2{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .peta{
+      display: block;
+    }
+    iframe{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 300px;
+      padding-bottom: 10px;
+    }
+    .peta h2{
+      text-align: center;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .image-container{
+      flex-direction: column;
+    }
+    .image-container img{
+      width: 98%;
+    }
+    .paket1,.paket2,.paket3{
+      width: 80%;
+      margin: 10px;
+      height: 550px;
+      text-align: left;
+    }
+    .paket3{
+      height: 570px;
+    }
+    #tanya1,
+    #tanya2,
+    #tanya3{
+      margin-top: 10px;
+      margin-left: 7px;
+    }
+    .tema,
+    .image-container p,
+    .harga,
+    .pay{
+      padding-left: 6px;
+    }
+  }
+  
+
+/* Ini adalah bagian shapedevider (header)*/
+  .custom-shape-divider-top-1714439166 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1000;
+}
+
+.custom-shape-divider-top-1714439166 svg {
+    position: relative;
+    display: block;
+    width: calc(216% + 1.3px);
+    height: 204px;
+}
+
+.custom-shape-divider-top-1714439166 .shape-fill {
+    fill: #6b6b6b;
+}
+
+/* Ini adalah bagian animation (displayIMG)*/
+@keyframes slideFromRight {
+  100% {
+    opacity: 1; /* Saat animasi selesai, ubah opacity menjadi 1 */
+    transform: translateX(0); /* Saat animasi selesai, kembalikan gambar ke posisi semula */
+  }
+}
+/* Ini adalah bagian animation (form) */
+@keyframes slideFromBottom {
+  100% {
+    opacity: 1; /* Saat animasi selesai, ubah opacity menjadi 1 */
+    transform: translateY(0); /* Saat animasi selesai, kembalikan div ke posisi semula */
+  }
+}
+
+/* Ini adalah bagian animation (tagline) */
+@keyframes slideFromTop {
+  100% {
+    opacity: 1; /* Saat animasi selesai, ubah opacity menjadi 1 */
+    transform: translateY(0); /* Saat animasi selesai, kembalikan div ke posisi semula */
+  }
+}
+
+/* Ini adalah bagian animation (nav) */
+@keyframes fadeIn {
+  100% {
+    opacity: 1; /* Saat animasi selesai, ubah opacity menjadi 1 */
+  }
+}
+
+/* MANIPULASI DOM */
+.paket1 {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 1s ease;
+    transform: translateY(20px);
+}
+
+.paket2 {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 1s ease;
+  transform: translateX(-20px);
+}
+
+.paket3 {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 1s ease;
+  transform: translateX(20px);
+}
+
+.fade-up {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.parag1,
+.parag2,
+.parag3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
